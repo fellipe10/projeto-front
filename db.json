@@ -1,0 +1,178 @@
+{
+  "salvar-informacoes": [
+    {
+      "nome":"Valeska","data_nascimento": 16101998,"sexo": "Femenino","pcd":"N","altura": 1.65,"peso": 62,"tipopessoa": "Fisica","idendereco":10,"idprofissao":1
+    }
+  ],
+  "pessoa": [],
+  "tipopessoa": [
+    {
+      "tipo": "Fisica",
+      "codigo": 1,
+      "id": "4abf"
+    },
+    {
+      "tipo": "Juridica",
+      "codigo": 2,
+      "id": "e3a0"
+    },
+    {
+      "tipo": "Especial",
+      "codigo": 3,
+      "id": "a236"
+    },
+    {
+      "tipo": "Outros",
+      "codigo": 4,
+      "id": "cfb5"
+    }
+  ],
+  "bairro": [
+    {
+      "codigo": 1,
+      "nome": "Marista",
+      "valoriptu": 2500,
+      "id": "f0f8"
+    },
+    {
+      "codigo": 2,
+      "nome": "Jardim Goias",
+      "valoriptu": 3000,
+      "id": "b061"
+    },
+    {
+      "codigo": 3,
+      "nome": "Bueno",
+      "valoriptu": 2100,
+      "id": "d772"
+    },
+    {
+      "codigo": 4,
+      "nome": "Fama",
+      "valoriptu": 1000,
+      "id": "5745"
+    },
+    {
+      "codigo": 5,
+      "nome": "Jardim Pompeia",
+      "valoriptu": 900,
+      "id": "7cff"
+    }
+  ],
+  "endereco": [
+    {
+      "codigo": 1,
+      "rua": "Rua 22",
+      "numero": "73",
+      "complemento": "Hotel",
+      "cep": "74120-130",
+      "bairro": 1,
+      "id": "fa3e"
+    },
+    {
+      "codigo": 2,
+      "rua": "Rua 9",
+      "numero": "1350",
+      "complemento": "Shopping",
+      "cep": "74110-100",
+      "bairro": 2,
+      "id": "daf9"
+    },
+    {
+      "codigo": 3,
+      "rua": "Av-T8",
+      "numero": "1016",
+      "complemento": "Academia",
+      "cep": "74210-270",
+      "bairro": 3,
+      "id": "22bc"
+    },
+    {
+      "codigo": 4,
+      "rua": "Rua Cuiba",
+      "numero": "24",
+      "complemento": "Casa",
+      "cep": "74553-425",
+      "bairro": 4,
+      "id": "d452"
+    },
+    {
+      "codigo": 5,
+      "rua": "Rua Doutor Paulo Alves",
+      "numero": "29",
+      "complemento": "Casa",
+      "cep": "74690-090",
+      "bairro": 5,
+      "id": "3dc8"
+    }
+  ],
+  "profissao": [
+    {
+      "codigo": 1,
+      "nome": "professor",
+      "salario": 3000,
+      "id": "f58d"
+    },
+    {
+      "codigo": 2,
+      "nome": "Analista",
+      "salario": 4000,
+      "id": "0628"
+    },
+    {
+      "codigo": 3,
+      "nome": "Desenvolvedor",
+      "salario": 10000,
+      "id": "f3ff"
+    },
+    {
+      "codigo": 4,
+      "nome": "Supervisor",
+      "salario": 6000,
+      "id": "b91d"
+    },
+    {
+      "codigo": 5,
+      "nome": "Gerente",
+      "salario": 15000,
+      "id": "29f3"
+    }
+  ],
+  "compras": [
+    {
+      "codigo": 1,
+      "valorTotal": 200,
+      "pessoaCodigo": 101,
+      "id": "6560"
+    },
+    {
+      "codigo": 2,
+      "valorTotal": 150,
+      "pessoaCodigo": 102,
+      "id": "4165"
+    }
+  ],
+  "itensCompra": [
+    {
+      "codigo": 1,
+      "compraCodigo": 1,
+      "valor": 100,
+      "descricao": "Item A",
+      "id": "8ba5"
+    },
+    {
+      "codigo": 2,
+      "compraCodigo": 1,
+      "valor": 100,
+      "descricao": "Item B",
+      "id": "3430"
+    },
+    {
+      "codigo": 3,
+      "compraCodigo": 2,
+      "valor": 150,
+      "descricao": "Item C",
+      "id": "2603"
+    }
+  ]
+}

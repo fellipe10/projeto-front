@@ -1,0 +1,25 @@
+<div class="col-12" id="paragrafo">
+  <h1>Sejam Bem-Vindos ao Começo do Sucesso</h1>
+</div>
+<hr />
+
+<table class="table">
+  <thead>
+      <tr>
+          <th>Codigo</th>
+          <th>Pessoa</th>
+          <th>Endereço</th>
+          <th>Bairro</th>
+          <th>Profissão</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="pessoa in pessoas" ng-show="pessoas.length > 0">
+      <th scope="row">{{pessoa.idpessoa}}</th>
+      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.endereco.rua}}</td>
+      <td>{{pessoa.endereco.bairro.nome}}</td>
+      <td>{{pessoa.profissao.nomeprofissao}}</td>
+    </tr>
+  </tbody>
+</table>

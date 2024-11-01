@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="paginainicial">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./tela-inicial/tela-inicial.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>  
+  <script src="./tela-inicial/inicialconfig.js"></script>
+  <script src="./comum/value/config.js"></script>
+  <script src="./tela-inicial/telainicialcontroller.js"></script>
+  <script src="./cadastro/cadastrocontroller.js"></script>
+  <script src="./endereco/enderecoservice.js"></script>
+  <script src="./pessoa/pessoaservice.js"></script>
+  <script src="./bairro/bairroservice.js"></script>
+  <script src="./profissao/profissaoservice.js"></script>
+  
+</head>
+<body >
+<div class="container mt-4">
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand">Barra de navegação</a>
+      <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" 
+        id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#!/telainicial">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/cadastro">Cadastro</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</nav>
+<div ng-view></div>
+</div>
+</body>
+</html>
