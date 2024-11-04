@@ -1,177 +1,165 @@
         <h5>Pagina Cadastro</h5>
-        <div>
-            <table>
-                <tr>
-                    <th>Bairro</th>
-                </tr>
-            </table>
-            <label for="bairro"></label>
-            <select id="bairro" 
-                class="form-control" 
-                ng-model="selecionado" 
-                ng-change="atualizarInformacoes()" 
-                ng-options="bairro.nome for bairro in bairros">
-                <option value="">Selecione</option>
-            </select>
-            <input type="text" 
-                id="codigoBairro" 
-                class="form-control" 
-                ng-model="codigoBairro" 
-                readonly 
-                placeholder="Codigo"/>
-            <input class="form-control" 
-                type="text" 
-                ng-model="valorIPTU" 
-                placeholder="Valor IPTU"/>
-        </div>
+    <form > 
+        <table>
+            <tr>
+                <th>Pessoa</th>
+            </tr>
+        </table>
 
-        <div>
-            <table>
-                <tr>
-                    <th>Endereço</th>
-                </tr>
-            </table>
-            <select id="ruaEndereco" 
-                class="form-control" 
-                ng-model="enderecoSelecionado" 
-                ng-change="atualizarInformacoesEndereco()" 
-                ng-options="endereco as endereco.rua for endereco in enderecos">
-                <option value="">Selecione</option>
-            </select>
+        <input class="form-control" 
+            type="text" 
+            ng-model="dadosFormulario.nome" 
+            placeholder="Nome"/>
 
-            <input type="text" 
-                id="codigoEndereco" 
-                class="form-control" 
-                ng-model="codigoEndereco" 
-                readonly 
-                placeholder="Código"/>
+        <input class="form-control" 
+            type="date" 
+            ng-model="dadosFormulario.dataNascimento" 
+            placeholder="Data de Nascimento"/>
+            
+        <select class="form-select" 
+            ng-model="dadosFormulario.sexo" 
+            name="sexo" 
+            id="sexo"
+            ng-required="true">
 
-            <input type="text" 
-                id="numeroEndereco" 
-                class="form-control" 
-                ng-model="numeroEndereco" 
-                readonly 
-                placeholder="Número"/>
-            <input type="text" 
-                id="complementoEndereco" 
-                class="form-control" 
-                ng-model="complementoEndereco" 
-                readonly 
-                placeholder="Complemento"/>
-            <input type="text" 
-                id="bairroEndereco" 
-                class="form-control" 
-                ng-model="bairroEndereco" 
-                readonly 
-                placeholder="Bairro"/>
-        </div>
+            <option value="" disabled>Sexo</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
 
-        <div>
-            <table>
-                <tr>
-                    <th>Profissão</th>
-                </tr>
-            </table>
-            <select id="nomeprofissao" 
-                class="form-control" 
-                ng-model="profissaoSelecionado" 
-                ng-change="atualizarInformacoesProfissao()" 
-                ng-options="profissao.nomeprofissao for profissao in profissoes">
-                <option value="">Selecione</option>
-            </select>        
-            <input type="text" 
-                id="codigoprofissao" 
-                class="form-control mt-2" 
-                ng-model="codigoprofissao" 
-                readonly 
-                placeholder="Código"/>
-            <input class="form-control mt-2" 
-                type="text" 
-                ng-model="salarioprofissao" 
-                readonly 
-                placeholder="Salário"/>
-        </div>
+        <select class="form-select" 
+            ng-model="dadosFormulario.portadorNecessidadeEspecial" 
+            name="necessidadesEspeciais" 
+            id="necessidadesEspeciais" 
+            ng-required="true">
 
-        <div>
-            <table>
-                <tr>
-                    <th>Pessoa</th>
-                </tr>
-            </table>
-            <input class="form-control" 
-                type="text" 
-                ng-model="codigoPessoa" 
-                placeholder="Codigo"/>
+            <option value="" disabled selected>É portador de necessidades especiais?</option>
+            <option value="S">Sim</option>
+            <option value="N">Não</option>
+        </select>
 
-            <input class="form-control" 
-                type="text" 
-                ng-model="nomePessoa" 
-                placeholder="Nome"/>
+        <input class="form-control" 
+            type="text" 
+            ng-model="dadosFormulario.altura" 
+            placeholder="Altura"/>
 
-            <input class="form-control" 
-                type="date" 
-                ng-model="dataNascimento" 
-                placeholder="Data de Nascimento"/>
-            <select class="form-select" 
-                ng-model="pessoa.sexo" 
-                name="sexo" 
-                id="sexo"
-                ng-required="true">
+        <input class="form-control" 
+            type="text" 
+            ng-model="dadosFormulario.peso" 
+            placeholder="Peso"/>
+
+        <input class="form-control" 
+            type="text" 
+            ng-model="cpf" 
+            placeholder="CPF"/>
+        <select class="form-select" 
+            ng-model="dadosFormulario.tipoPessoa" 
+            name="tipoPessoa" 
+            id="tipoPessoa"
+            ng-required="true">
     
-                <option value="" disabled>Sexo</option>
-                <option value="M">Masculino</option>
-                <option value="F">Feminino</option>
-            </select>
-            <select class="form-select" 
-                ng-model="pessoa.necessidadesEspeciais" 
-                name="necessidadesEspeciais" 
-                id="necessidadesEspeciais" 
-                ng-required="true">
+            <option value="" disabled>Tipo de pessoa</option>
+            <option value="Física">Física</option>
+            <option value="Jurídica">Jurídica</option>
+            <option value="Especial">Especial</option>
+            <option value="Outros">Outros</option>
+        </select>
 
-                <option value="" disabled selected>É portador de necessidades especiais?</option>
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-            </select>
-            <input class="form-control" 
-                type="text" 
-                ng-model="altura" 
-                placeholder="Altura"/>
+        <table>
+            <tr>
+                <th>Bairro</th>
+            </tr>
+        </table>
+        <label for="bairro"></label>
+        <select id="bairro" 
+            class="form-control" 
+            ng-model="selecionado" 
+            ng-change="atualizarInformacoes()" 
+            ng-options="bairro.nome for bairro in bairros">
+            <option value="">Selecione</option>
+        </select>
 
-            <input class="form-control" 
-                type="text" 
-                ng-model="peso" 
-                placeholder="Peso"/>
+        <input type="text" 
+            id="codigoBairro" 
+            class="form-control" 
+            ng-model="dadosFormulario.bairro.id" 
+            readonly 
+            placeholder="Codigo"/>
 
-            <input class="form-control" 
-                type="text" 
-                ng-model="cpf" 
-                placeholder="CPF"/>
-            <select class="form-select" 
-                ng-model="pessoa.tipoPessoa" 
-                name="tipoPessoa" 
-                id="tipoPessoa"
-                ng-required="true">
-    
-                <option value="" disabled>Tipo de pessoa</option>
-                <option value="Física">Física</option>
-                <option value="Jurídica">Jurídica</option>
-                <option value="Especial">Especial</option>
-                <option value="Outros">Outros</option>
-            </select>
-    
+        <input class="form-control" 
+            type="text" 
+            ng-model="dadosFormulario.bairro.valorIptu" 
+            placeholder="Valor IPTU"/>
 
-            <input class="form-control" 
-                type="text" 
-                ng-model="enderecoPessoa" 
-                placeholder="Endereço"/>
+        <table>
+            <tr>
+                <th>Endereço</th>
+            </tr>
+        </table>
+        <select id="ruaEndereco" 
+            class="form-control" 
+            ng-model="enderecoSelecionado" 
+            ng-change="atualizarInformacoesEndereco()" 
+            ng-options="endereco as endereco.rua for endereco in enderecos">
+            <option value="">Selecione</option>
+        </select>
 
-            <input class="form-control" 
-                type="text" 
-                ng-model="profissaoPessoa" 
-                placeholder="Profissão"/>
-        </div>
+        <input type="text" 
+            id="codigoEndereco" 
+            class="form-control" 
+            ng-model="dadosFormulario.endereco.idEndereco" 
+            readonly 
+            placeholder="Código"/>
 
-        <div>
+        <input type="text" 
+            id="numeroEndereco" 
+            class="form-control" 
+            ng-model="dadosFormulario.endereco.numero" 
+            readonly 
+            placeholder="Número"/>
+
+        <input type="text" 
+            id="complementoEndereco" 
+            class="form-control" 
+            ng-model="dadosFormulario.endereco.complemento" 
+            readonly 
+            placeholder="Complemento"/>
+
+        <input type="text" 
+            id="bairroEndereco" 
+            class="form-control" 
+            ng-model="dadosFormulario.endereco.bairro.nome" 
+            readonly 
+            placeholder="Bairro"/>
+
+        <table>
+            <tr>
+                <th>Profissão</th>
+            </tr>
+        </table>
+        <select id="nomeprofissao" 
+            class="form-control" 
+            ng-model="profissaoSelecionado" 
+            ng-change="atualizarInformacoesProfissao()" 
+            ng-options="profissao.nomeprofissao for profissao in profissoes">
+            <option value="">Selecione</option>
+        </select>
+
+        <input type="text" 
+            id="codigoprofissao" 
+            class="form-control mt-2" 
+            ng-model="dadosFormulario.profissao.idprofissao" 
+            readonly 
+            placeholder="Código"/>
+
+        <input class="form-control mt-2" 
+            type="text" 
+            ng-model="dadosFormulario.profissao.salario" 
+            readonly 
+            placeholder="Salário"/>
+    </form>
+
+        <!-- <div>
             <table>
                 <tr>
                     <th>Compra</th>
@@ -215,16 +203,10 @@
                 type="text" 
                 ng-model="Compra" 
                 placeholder="Compra"/>
-        </div>
+        </div> -->
 
-        <button type="submit" 
-            class="btn btn-primary btn-block" 
-            ng-click="salvar()">
-                Salvar
-        </button>
-
-        <button type="submit" 
-            class="btn btn-danger btn-block" 
-            ng-click="apagar()">
-                Apagar
-        </button>
+    <button type="submit" 
+        class="btn btn-primary btn-block" 
+        ng-click="salvar()">
+            Salvar
+    </button>

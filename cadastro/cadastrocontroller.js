@@ -1,5 +1,10 @@
-angular.module("paginainicial").controller("cadastroctrl", function($scope,enderecoApi,pessoaApi,bairroApi,profissaoApi) {
+angular.module("paginainicial").controller("cadastroctrl", function($scope,$http,enderecoApi,pessoaApi,bairroApi,profissaoApi) {
 
+    $scope.dadosFormulario = {
+        endereco : {},
+        profissao : {},
+        bairro : {}
+    }
     pessoaApi.buscarPessoa().then(function(response) { 
         $scope.pessoas = response.data; 
     });
@@ -45,20 +50,25 @@ angular.module("paginainicial").controller("cadastroctrl", function($scope,ender
     }
 
     $scope.atualizarInformacoes = function(){
-        $scope.codigoBairro = $scope.selecionado.id;
-        $scope.valorIPTU = $scope.selecionado.valorIptu;
+        $scope.dadosFormulario.bairro = $scope.selecionado;
     }
     $scope.atualizarInformacoesEndereco = function(){
-        $scope.codigoEndereco = $scope.enderecoSelecionado.idEndereco;
-        $scope.numeroEndereco = $scope.enderecoSelecionado.rua;
-        $scope.complementoEndereco = $scope.enderecoSelecionado.complemento;
-        $scope.numeroEndereco = $scope.enderecoSelecionado.numero;
-        $scope.bairroEndereco = $scope.enderecoSelecionado.bairro.nome;        
+        $scope.dadosFormulario.endereco = $scope.enderecoSelecionado;     
     }
     $scope.atualizarInformacoesProfissao = function(){
-        $scope.codigoprofissao = $scope.profissaoSelecionado.idprofissao;
-        $scope.salarioprofissao = $scope.profissaoSelecionado.salario;
+        $scope.dadosFormulario.profissao = $scope.profissaoSelecionado;
     }
-    
+
+
+    $scope.salvar = function() {
+        pessoaApi.salvarPessoa($scope.dadosFormulario).then(
+            function(response){
+                console.log(response)
+            }
+        ).catch(function(error){
+            console.log(error)
+        })
+       
+    }
 
 });
