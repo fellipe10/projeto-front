@@ -8,6 +8,10 @@ angular.module("paginainicial").factory("pessoaApi", function($http,config){
         salvarPessoa : function(dadosPessoa) {
             console.log("dadosPessoa",dadosPessoa)
         return $http.post(baseUrl, dadosPessoa); 
+        },
+
+        apagarPessoa : function(id){
+            return $http.delete(`${baseUrl}/${id}`)
         }
     }
 

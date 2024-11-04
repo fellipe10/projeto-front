@@ -68,7 +68,6 @@ angular.module("paginainicial").controller("cadastroctrl", function($scope,$http
         ).catch(function(error){
             console.log(error)
         })
-       
     }
 
 });

@@ -20,7 +20,6 @@ body {
     width: 400px;
 }
 
-
 .navbar-brand {
     vertical-align: inherit;
     text-align: center
@@ -37,5 +36,8 @@ body {
     margin-left: 0.3em;
     font-size: 1.5rem;
 };
-
+.btn-red { 
+    background-color: red; 
+    color: rgb(163, 7, 7); 
+    border: none; }
 

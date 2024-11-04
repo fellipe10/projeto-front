@@ -20,6 +20,16 @@
       <td>{{pessoa.endereco.rua}}</td>
       <td>{{pessoa.endereco.bairro.nome}}</td>
       <td>{{pessoa.profissao.nomeprofissao}}</td>
+      <td>
+        <button type="button" 
+          class="btn btn-red btn-block" 
+          ng-click="apagar(pessoa.idpessoa)">
+            Apagar
+        </button>
+      </td>
     </tr>
-  </tbody>
+</tbody>
+
 </table>
+
+
